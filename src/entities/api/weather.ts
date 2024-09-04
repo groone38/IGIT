@@ -1,9 +1,6 @@
 import { apiClient, apiWeather } from "entities/config/api/instance";
 import { IWeatherList } from "entities/types/weather/weatherType";
 
-// const API_KEY = "38b7b42d3a3767d1618fd582ddb56e01";
-// const API = process.env.API_KEY;
-// console.log(API);
 class WeatherService {
   getWeather(lat: number, lon: number) {
     return apiWeather.get<{ list: IWeatherList[] }>(
