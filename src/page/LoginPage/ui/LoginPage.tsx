@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "shared/Button/Button";
 import Input from "shared/Input/Input";
@@ -10,6 +10,13 @@ const LoginPage = () => {
   const [error, setError] = useState<string>();
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/");
+    }
+  }, []);
 
   const onSubmit = () => {
     if (login === "admin" && password === "admin") {

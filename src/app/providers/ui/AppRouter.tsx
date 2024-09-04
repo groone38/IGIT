@@ -5,10 +5,11 @@ import {
   routerConfigPrivate,
 } from "app/providers/config/routerConfig/routerConfig";
 import PrivateRoute from "./PrivateRoute";
+import Loader from "shared/Loader/Loader";
 
 export const AppRouter = () => {
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route element={<PrivateRoute />}>
           {Object.values(routerConfigPrivate).map(({ element, path }) => (

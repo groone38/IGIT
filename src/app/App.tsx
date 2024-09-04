@@ -4,11 +4,12 @@ import {
   LinearScale,
   LineElement,
   PointElement,
+  Tooltip,
 } from "chart.js";
 import { AppRouter } from "./providers";
 import "./styles/index.scss";
 
-Chart.register(CategoryScale, LinearScale, PointElement, LineElement);
+Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip);
 
 function App() {
   return (

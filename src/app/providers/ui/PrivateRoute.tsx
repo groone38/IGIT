@@ -1,13 +1,20 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { NavBar } from "widgets/NavBar/NavBar";
 
 const PrivateRoute = () => {
   const auth = localStorage.getItem("token");
-  console.log(auth);
+  const location = useLocation();
+
   if (!auth) {
-    return <Navigate to={"/not_found"} />;
+    return <Navigate to={"/not_auth"} state={{ from: location }} replace />;
   }
 
-  return <Outlet />;
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 };
 
 export default PrivateRoute;
