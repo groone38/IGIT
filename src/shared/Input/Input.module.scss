@@ -1,0 +1,32 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 1);
+}
+
+input {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgba(232, 232, 232, 1);
+
+  &:focus {
+    border: 3px solid rgba(39, 110, 241, 1);
+  }
+}
+
+.hint {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(94, 94, 94, 1);
+}
