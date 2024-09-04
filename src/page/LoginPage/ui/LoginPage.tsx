@@ -29,6 +29,10 @@ const LoginPage = () => {
 
   return (
     <div className={cls.wrapper}>
+      <div className={cls.help}>
+        <p>Login: admin</p>
+        <p>Password: admin</p>
+      </div>
       <div className={cls.login}>
         {error && <span className={cls.error}>{error}</span>}
         <Input type="text" label="Login:" value={login} onChange={setLogin} />

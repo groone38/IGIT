@@ -65,6 +65,7 @@ const WeatherPage = () => {
     setLoading(true);
 
     try {
+      // Роут не отработает так как бэка нет, просто пример отправки погоды на сервер
       const { data } = await api.weatherService.sendWeather(weather);
       if (!data) {
         return;

@@ -7,14 +7,14 @@ const NotFoundPage = () => {
   const navigate = useNavigate();
 
   const back = () => {
-    navigate("/login");
+    navigate(-1);
   };
 
   return (
     <div className={cls.NotFoundPage}>
       <h1>400</h1>
       <h3>Такой страницы не существует</h3>
-      <Button onClick={back}>Авторизоваться</Button>
+      <Button onClick={back}>Обратно к работе</Button>
     </div>
   );
 };

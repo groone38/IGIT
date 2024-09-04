@@ -13,7 +13,8 @@ export const apiClient = axios.create({
   // Тут подразумевается что будут запросы для авторизованных
   baseURL: "https://api.igitbackendclient/",
 });
-// Интерсепшен для авторизованных
+
+// Интерсептор для авторизованных
 apiClient.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
